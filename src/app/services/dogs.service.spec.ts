@@ -23,7 +23,7 @@ describe('DogsService', () => {
 
   it('should return dog by id', () => {
     const dogId = '4ziNJuYbfDius'; // from dogdata.json
-    expect(service.get(dogId)).toEqual(JSON.parse(dogJson));
+    expect(service.get(dogId)).toEqual(JSON.parse(dogJson)[0]);
   });
 
   it('should return all dogs', () => {

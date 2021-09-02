@@ -20,8 +20,8 @@ export class DogsService {
     return of(this.dogData);
   }
 
-  get(dogId: string): Dog[] {
-    return this.dogData.filter(dog => dog.id === dogId);
+  get(dogId: string): Dog {
+    return this.dogData.filter(dog => dog.id === dogId)[0];
   }
 
   getLikes(dogId): number {

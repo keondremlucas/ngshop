@@ -27,8 +27,10 @@ describe('DogListComponent', () => {
   });
 
   it('should render a list of dogs', () => {
-    expect(component.dogs).toBeDefined()
-    expect(html.querySelector('dog'))
+    spyOn(component, 'loadDogs');
+    const allButton = html.querySelector('#allDogs');
+    allButton.click();
+    expect(component.loadDogs).toHaveBeenCalled();
   });
 
   it('should render list of favorite dogs', () => {
