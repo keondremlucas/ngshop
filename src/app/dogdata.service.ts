@@ -19,7 +19,7 @@ export class DogdataService {
         return this.dogData[x];
       }
    }
-    
+
   }
 
   alldogs(): Observable<Dog[]> {
@@ -44,12 +44,14 @@ export class DogdataService {
      if(!this.dogData[index].favorite)
      {
       this.dogData[index].favorite = true;
+      
      }
      else
      {
         this.dogData[index].favorite = false;
+
      };
-     console.log(this.dogData[index].favorite)
+
 
  }
 
