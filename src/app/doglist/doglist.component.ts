@@ -17,4 +17,12 @@ export class DoglistComponent implements OnInit {
 
   }
 
+  likeclick(index: number){
+    this.dogService.likeclick(index);
+  }
+
+  favoriteclick (index: number){
+      this.dogService.favoriteclick(index);
+  }
+
 }

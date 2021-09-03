@@ -1,14 +1,25 @@
-<table>
-    <tr>
-    <th> Dogs</th>
-    </tr>
-    <tr>
-     <td>
-     <div *ngFor = "let dog of dogs" >{{dog.name}}</div>
-    </td>
-    <td>
-        <div *ngFor = "let dog of dogs" ><img src ={{dog.image}} style="width:50px;height:50px"></div>
-    </td>
-    </tr>
-</table>
+<div class="row justify-content-center ">
+  <div class="col-auto">
+    <table id ="Dogtable" class ="table-responsive align-middle " >
+      <tr *ngFor = "let dog of dogs; index as i" height ="60px">
+        <td width = "100px"  class="table-primary"><b>{{dog.name}}</b></td>
+        <td width = "60px"  class="table-primary"><img src ={{dog.image}} style="width:50px;height:50px"></td>
+        <td><button id= "likebutton" type="button" class="btn btn-success" (click)=likeclick(i)>Like</button><button (click)=favoriteclick(i) type="button" class="btn btn-warning">Favorite</button></td>
+        <td width = "100px" ><b>{{dog.likes}}</b></td>
+      </tr>
+  </table>
+  </div>
+</div>
+<!-- <div class="row justify-content-right">
+  <div class="col-auto">
+    <table class ="table align-middle" >
+      <th>Favorites<i class="bi bi-star"></i></th>
+      <tr>
+        <td> Fav</td>
+      </tr>
+  </table>
+  </div>
+</div> -->
+
+
 
