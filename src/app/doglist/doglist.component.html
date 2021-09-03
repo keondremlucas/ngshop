@@ -1,25 +1,23 @@
-<div class="row justify-content-center ">
+<div style="overflow-y: scroll;  height: 700px;">
+  <div class="row justify-content-center ">
   <div class="col-auto">
-    <table id ="Dogtable" class ="table-responsive align-middle " >
+
+    <table id ="Dogtable" class ="table-responsive align-middle table-fixed  table-bordered " cellspacing="0" style="background-color:rgb(175, 177, 179)">
+      <tr>
+        <th class = "justify-content-center" >
+          Name
+        </th>
+        <th class = "justify-content-center" >
+          Image
+        </th>
+      </tr>
       <tr *ngFor = "let dog of dogs; index as i" height ="60px">
         <td width = "100px"  class="table-primary"><b>{{dog.name}}</b></td>
         <td width = "60px"  class="table-primary"><img src ={{dog.image}} style="width:50px;height:50px"></td>
-        <td><button id= "likebutton" type="button" class="btn btn-success" (click)=likeclick(i)>Like</button><button (click)=favoriteclick(i) type="button" class="btn btn-warning">Favorite</button></td>
-        <td width = "100px" ><b>{{dog.likes}}</b></td>
+        <td><button id= "likebutton" type="button" class="btn btn-success" (click)=likeclick(i)>Like</button> <button (click)=favoriteclick(i) type="button" class="btn btn-warning">Favorite</button></td>
+        <td width = "50px" bg-color="red" >Likes: <b>{{dog.likes}}</b></td>
       </tr>
   </table>
+  </div>
   </div>
 </div>
-<!-- <div class="row justify-content-right">
-  <div class="col-auto">
-    <table class ="table align-middle" >
-      <th>Favorites<i class="bi bi-star"></i></th>
-      <tr>
-        <td> Fav</td>
-      </tr>
-  </table>
-  </div>
-</div> -->
-
-
-
